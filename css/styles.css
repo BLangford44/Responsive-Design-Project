@@ -1,0 +1,199 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: 'Jost', sans-serif;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+}
+
+/* a{
+    color: black;
+} */
+
+h3{
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+p{
+    font-size: 1.25em;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+.wrapper{
+    text-align: center;
+}
+
+.main-header,
+.about-me,
+.contact,
+.main-footer {
+    background-color: lightgray;
+}
+
+.main-header{
+    margin-bottom:3em;
+    padding-top: 1em;
+}
+
+.nav-button{
+    background-color: whitesmoke;
+    margin: .5em 1em;
+    padding: .5em 0;
+}
+
+.profile-pic{
+    margin-top: 3em;
+    width: 70%;
+}
+
+.about-me{
+    margin-top: -3em; 
+    padding-bottom: 1em;  
+}
+
+.portfolio{
+    margin: 1em 1em;
+}
+.contact{
+    margin-bottom: -2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.main-footer{
+    margin-top: 2em;
+}
+
+.main-footer .wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    flex: 1 50%;
+
+    width: 90%;
+    border-top: 1px solid black;
+    font-size: 1em;
+    font-weight: bold;
+    margin: auto;
+}
+
+.footer-nav{ 
+    display:none; /*Prevent full nav from appearing on small screens*/
+}
+
+/*==================== 
+MEDIA QUERIES 
+==================== */
+
+@media screen and (min-width: 768px) {
+
+    .main-nav,
+    .about-me,
+    .portfolio .wrapper,
+    .footer-nav{
+        display: flex;
+    }
+
+   .main-nav{
+       justify-content: space-around;
+       margin: 0 25%;
+   }
+
+   .nav-button{
+       background-color: lightgray;
+   }
+
+   .about-me{
+        align-items: center;
+        text-align: left;
+
+        padding: 1em;
+    }
+
+   .profile-pic{
+       order:1;
+       margin: 1em;
+   }
+
+   .portfolio .wrapper{
+       flex-wrap: wrap;
+   }
+
+   .project{
+       max-width: 47%;
+       margin: .5em auto;
+   }
+
+    .contact .wrapper{
+        margin: 1em 15%;
+    }
+
+    .main-footer{
+        font-size: .75em;
+    }
+
+    .to-top{
+        display: none; /*Prevent "Back to Top" from appearing on small screens*/
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    body{
+        background-color: lightgray;
+    }
+
+    .main-header .wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-between;
+        flex: 1 50%;
+
+        width: 90%;
+        margin: auto;
+    }
+
+    .main-nav{
+        margin: 0;
+    }
+
+    .about-me p{
+        font-size: 1.5em;
+        margin-right: 5%;
+    }
+
+   .profile-pic{
+       order:1;
+       margin: 1em;
+       width: 100%;
+   }
+
+    .wrapper{
+        margin: 0 5%;
+    }
+
+    .portfolio{
+        background-color: white;
+        padding-top: 1em;
+    }
+
+    .project{
+        max-width: 30%;
+        margin: .5em auto;
+    }
+}
